@@ -49,12 +49,16 @@ body {
 
 .nav-item {
     list-style: none;
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 
 .nav-link {
     text-decoration: none;
     color: rgb(15, 118, 110);
+}
+
+.nav-item:hover {
+    font-weight: bolder;
 }
 
 /*  NAV SECITON - MEDIA */
@@ -63,25 +67,68 @@ body {
 /*  NAV SECTION - END */
 
 
+.sticky-container {
+    height: 60px;
+    width: 240px;
+    background-color: rgb(37, 211, 122);
+
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+
+    position: sticky;
+    left: 100%;
+    top: 75%;
+    z-index: 5;
+}
+
+.sticky-container:hover {
+    background-color: rgb(32, 190, 109);
+}
+
+.sticky-container svg{
+    width: 35px;
+    height: 35px;
+}
+
+.link-txt {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+}
 
 
 
 /*  HERO SECTIONS - START  */
 .main-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    gap: 70px;
     
 }
 
 .hero-section-container {
-    width: 100%;
-    display: flex;
+    width: 100vw;
     background-color: transparent;
-    margin-top: 60px;
+
+    
+    display: flex;
+    box-sizing: border-box;
+
 }
 
 .hero-section {
@@ -108,14 +155,13 @@ body {
 
 .item--info h1 {
     margin: 0;
-    font-size: 26px;
-    color: rgb(18, 118, 110);
-}
-
-.item--info h2 {
-    margin: 0;
     font-size: 32px;
     color: rgb(0, 0, 0);
+}
+
+.item--info__tittle strong {
+    font-size: 26px;
+    color: rgb(18, 118, 110);
 }
 
 .item--info img {
@@ -142,6 +188,7 @@ body {
 
 .item--mision p {
     font-size: 20px;
+    text-align: justify;
     line-height: 1.5;
     color: #1a1a1a;
 }
@@ -154,12 +201,17 @@ body {
 
 /*  OPINION - START  */
 .opinion-section {
+    height: 100vh;
+    width: 100vw;
+
+    box-sizing: border-box;
+    padding: 0 80px;
+    
     display: flex;
     flex-direction: column;
     gap: 30px;
 
-    margin-top: 100px;
-    padding: 50px 80px;
+
 }
 
 .section-ttl-container h2{
@@ -211,6 +263,7 @@ body {
 .user-img-container img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
 
 .user-info {
@@ -228,6 +281,8 @@ body {
 
 /*  OPINION - MEDIA */
 
+
+
 /*  OPINION - END */
 
 
@@ -236,27 +291,235 @@ body {
 
 
 
+/*  PROCESS - START  */
+.process-section {
+    height: 100vh;
+    width: 100vw;
+    
+    margin: 0;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.process-section--container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 150px;
+
+}
+
+.p__container-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0;
+    padding-bottom: 40px;
 
 
+    border: none;
+    border-bottom: 3px solid rgb(201, 162, 39);
+}
+
+.p__container-txt h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.p__container-txt h4{
+    font-size: 32px;
+    color: rgb(18, 118, 110);
+
+}
+
+.p__container-txt p{
+    font-size: 16px;
+}
+
+.process-steps-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    z-index: 1;
+}
+
+.process-steps-container::before {
+    content: '';
+    position: absolute;
+    top: 40px;          /* Centra la línea a la mitad de la altura de la imagen (80px / 2) */
+    left: 8%;           /* Ajusta dónde inicia la línea en el primer círculo */
+    right: 8%;          /* Ajusta dónde termina la línea en el último círculo */
+    height: 2px;
+    background-color: rgb(18, 118, 110); /* Color claro de la línea */
+    z-index: -1;         /* Coloca la línea por detrás */
+}
+
+.process--step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    border: none;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.process--step:hover {
+    
+}
+
+.process--step img{
+    width: 80px;
+    height: 80px;
+
+    background-color: transparent;
+
+    border: none;
+    border: 2px solid  transparent;
+    border-radius: 50%;
+}
+
+.process--step h5 {
+    font-size: 18px;
+}
+
+.process--step img{
+    font-size: 14px;
+}
+
+.process--step p{
+    text-align: justify;
+}
 
 
+/*  PROCESS - MEDIA */
 
-/*  HERO SECTIONS - START  */
-
-
-
-/*  HERO SECTION - MEDIA */
-
-/*  HERO SECTION - END */
-
-
-
-
+/*  PROCESS - END */
 
 
 
 /*  FOOTER - START  */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 
+    color: rgb(255, 255, 255);
+    margin-top: 120px;
+
+}
+
+.footer-img {
+    width: 100%;
+    height: 40%;
+    background-image: url(./img/images.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 25%;
+}
+
+.footer-info {
+    width: 100%;
+    height: 60%;
+    background-color: rgb(18, 118, 110);
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-tittle {
+    background-color: transparent;
+}
+
+.footer-tittle h5 {
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+}
+
+.separador-2 {
+    width: 25%;
+    border: none;
+    border: 1px solid rgb(201, 162, 39);
+}
+
+.footer-txt {
+    display: flex;
+    flex-direction: row;
+    gap: 11.5rem;
+
+    background-color: transparent;
+}
+
+.txt-hook p {
+    font-size: 26px;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.location-container h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+.location-container h5 {
+    font-size: 24px;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.time-container h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+.time-container h5{
+    font-size: 24px;
+}
+
+.footer-socialmedia {
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.footer-socialmedia svg {
+    height: 30px;
+    width: 30px;
+}
+
+
+.socialmedia-icon {
+    width: 40px;
+    height: 40px;
+    stroke: rgb(255, 255, 255);
+}
+
+.socialmedia-icon {
+    color: #fff;
+}
 
 
 /*  FOOTER - MEDIA */
