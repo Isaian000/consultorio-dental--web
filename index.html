@@ -8,73 +8,97 @@
     <link href="/icons/css/uicons-rounded-regular.css" rel="stylesheet"> <!--load all styles -->
 </head>
 <body>
-    <nav class="nav-container">
-
-        <div class="nav-tittle">
-            <h2>Tu salud dental empieza aquí</h2>
+    <div class="topbar">
+        <div class="topbar-inner">
+            <p>Tu salud dental empieza aquí</p>
+            <p class="topbar-hours">
+                <span>Lunes a viernes 9:00 am - 6:00 pm</span>
+                <span>Sábados 11:00 am - 3:00 pm</span>
+            </p>
         </div>
-
-        <div class="nav">
-
-            <ul class="nav-list">
-
-                <li class="nav-item">
-                    <a href="#main--section" class="nav-link">Inicio</a>
-                </li>
-
-                <li class="nav-item tratamientos-item">
-                    <a href="#services-section" class="nav-link">Tratamientos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#opinion--section" class="nav-link">Reseñas</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#process--section" class="nav-link">Proceso</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#footer--section" class="nav-link">Contacto</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-        <!-- Mega menú -->
-        <div class="mega-menu" id="mega-menu">
-            <div class="mega-column">
-                <h3>Estética dental</h3>
-                <a href="#">Blanqueamiento dental</a>
-                <a href="#">Carillas dentales</a>
-                <a href="#">Ortodoncia</a>
-                <a href="#">Diseño de sonrisa</a>
-            </div>
-
-            <div class="mega-column">
-                <h3>Salud dental</h3>
-                <a href="#">Endodoncia</a>
-                <a href="#">Periodoncia</a>
-                <a href="#">Limpieza dental</a>
-            </div>
-
-            <div class="mega-column">
-                <h3>Cirugía e implantes</h3>
-                <a href="#">Implantes dentales</a>
-                <a href="#">Prótesis fijas y removibles</a>
-                <a href="#">Extracción de piezas dentales</a>
-            </div>
-        </div>
-
-    </nav>
-
-    <div class="sticky-container">
-        <a href="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-        </a>
-        <a href="" class="link-txt">Agenda tu cita</a>
     </div>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+
+            <a href="#main--section" class="header-brand">
+                <span class="brand-mark" aria-hidden="true">JV</span>
+                <span class="brand-text">
+                    Dr. Juan José Vega
+                    <small>Cirujano Dentista</small>
+                </span>
+            </a>
+
+            <button class="header-toggle" type="button" aria-expanded="false"
+                aria-controls="header-nav" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header-nav" id="header-nav" aria-label="Principal">
+
+                <ul class="header-list">
+
+                    <li>
+                        <a href="#main--section" class="header-link">Inicio</a>
+                    </li>
+
+                    <li class="has-mega">
+                        <a href="#services-section" class="header-link">
+                            Tratamientos
+                            <span class="header-chevron" aria-hidden="true"></span>
+                        </a>
+
+                        <!-- Mega menú -->
+                        <div class="mega-menu" id="mega-menu">
+                            <div class="mega-column">
+                                <h3>Estética dental</h3>
+                                <a href="#services-section">Blanqueamiento dental</a>
+                                <a href="#services-section">Carillas dentales</a>
+                                <a href="#services-section">Ortodoncia</a>
+                                <a href="#services-section">Diseño de sonrisa</a>
+                            </div>
+
+                            <div class="mega-column">
+                                <h3>Salud dental</h3>
+                                <a href="#services-section">Endodoncia</a>
+                                <a href="#services-section">Periodoncia</a>
+                                <a href="#services-section">Limpieza dental</a>
+                            </div>
+
+                            <div class="mega-column">
+                                <h3>Cirugía e implantes</h3>
+                                <a href="#services-section">Implantes dentales</a>
+                                <a href="#services-section">Prótesis fijas y removibles</a>
+                                <a href="#services-section">Extracción de piezas dentales</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#opinion--section" class="header-link">Reseñas</a>
+                    </li>
+
+                    <li>
+                        <a href="#process--section" class="header-link">Proceso</a>
+                    </li>
+
+                    <li>
+                        <a href="#footer--section" class="header-link">Contacto</a>
+                    </li>
+
+                </ul>
+
+                <a href="https://wa.me/523318460759?text=Hola%2C%20quiero%20agendar%20una%20cita" class="header-cta" target="_blank" rel="noopener">
+                    <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    Agenda una cita
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
     
 
 
@@ -113,8 +137,9 @@
             
                 <div class="hero-buttons">
                 
-                    <a href="#" class="btn-primary">
-                    
+                    <a href="https://wa.me/523318460759?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn-primary" target="_blank" rel="noopener">
+
+                        <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
                         Agenda una cita
                     
                     </a>
@@ -350,7 +375,7 @@
             </div>
         </section>
 
-        <section class="testimonials-section">
+        <section class="testimonials-section" id="opinion--section">
             <div class="testimonials-header">
                 <span class="section-tag">
                     TESTIMONIOS
@@ -540,44 +565,87 @@
     </main>
 
     <footer class="footer-section" id="footer--section">
-        <div class="footer-img"></div>
-        <div class="footer-info">
-            <div class="footer-tittle">
-                <h5>Dr. Juan Jose <br>Vega Elizondo</h5>
-            </div>
-            <div class="separador-2"></div>
-            <div class="footer-txt">
-                <div class="txt-hook">
-                    <p>Tu sonrisa es primero</p>
-                </div>
-                <div class="location-container">
-                    <h5>Ubicacion</h5>
-                    <p>Av. Naciones Unidas <br>Zapopan, Jal, 445567</p>
-                </div>
-                <div class="time-container">
-                    <h5>Horarios</h5>
-                    <div class="days-container">
-                        <div class="weekdays-container">
-                            <p class="item-weekdays">Lunes a Viernes</p>
-                            <p class="weekdays-time">9:00 am - 6:00 pm</p>
-                        </div>
-                        <div class="weekend-container">
-                            <p class="item-weekend">Sabados</p>
-                            <p class="weekend-time">11:00 am - 3:00 pm</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-socialmedia">
-                <p>Sigueme</p>
-                <a href="https://www.facebook.com/">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+
+        <div class="footer-main">
+
+            <div class="footer-cta">
+                <h2>Tu sonrisa es primero.</h2>
+                <p>
+                    Agenda tu valoración y recibe un plan de tratamiento
+                    hecho para ti.
+                </p>
+                <a href="https://wa.me/523318460759?text=Hola%2C%20quiero%20agendar%20una%20cita" class="footer-button" target="_blank" rel="noopener">
+                    <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    Agenda una cita
                 </a>
             </div>
+
+            <div class="footer-details">
+
+                <div class="footer-block">
+                    <h3>Ubicación</h3>
+                    <address>
+                        Av. Naciones Unidas<br>
+                        Zapopan, Jal, 445567
+                    </address>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Av.+Naciones+Unidas%2C+Zapopan%2C+Jalisco"
+                        class="footer-link" target="_blank" rel="noopener">Cómo llegar</a>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Horarios</h3>
+                    <dl class="footer-hours">
+                        <div>
+                            <dt>Lunes a viernes</dt>
+                            <dd>9:00 am - 6:00 pm</dd>
+                        </div>
+                        <div>
+                            <dt>Sábados</dt>
+                            <dd>11:00 am - 3:00 pm</dd>
+                        </div>
+                    </dl>
+                </div>
+
+            </div>
+
+            <figure class="footer-photo">
+                <img src="./img/images.jpeg" alt="Paciente durante una revisión dental en el consultorio"
+                    width="678" height="452" loading="lazy">
+            </figure>
+
         </div>
+
+        <div class="footer-bottom">
+
+            <p class="footer-name">
+                Dr. Juan José Vega Elizondo
+                <span>Cirujano Dentista</span>
+            </p>
+
+            <nav class="footer-nav" aria-label="Pie de página">
+                <a href="#main--section">Inicio</a>
+                <a href="#services-section">Tratamientos</a>
+                <a href="#opinion--section">Reseñas</a>
+                <a href="#process--section">Proceso</a>
+            </nav>
+
+            <div class="footer-social">
+                <span>Sígueme</span>
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-wordmark" aria-hidden="true">
+            <span>JUAN</span>
+            <span>VEGA</span>
+        </div>
+
     </footer>
 
     <script src="script.js"></script>

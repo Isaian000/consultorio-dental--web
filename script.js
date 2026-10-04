@@ -1,46 +1,74 @@
-const tratamientos = document.querySelector(".tratamientos-item");
-const megaMenu = document.querySelector("#mega-menu");
+const header = document.querySelector("#site-header");
+const menuToggle = document.querySelector(".header-toggle");
+const megaItem = document.querySelector(".has-mega");
+const topbar = document.querySelector(".topbar");
 
 
-console.log("Script cargado");
+// Menú móvil
+function setMenu(open){
 
-tratamientos.addEventListener("mouseenter", function(){
+    header.classList.toggle("is-open", open);
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
 
-    megaMenu.classList.add("show");
+}
+
+menuToggle.addEventListener("click", function(){
+
+    setMenu(!header.classList.contains("is-open"));
+
+});
+
+header.querySelectorAll("a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        setMenu(false);
+
+    });
 
 });
 
 
-tratamientos.addEventListener("mouseleave", function(){
+// El mega menú se cierra al elegir un tratamiento, aunque el cursor siga encima
+megaItem.querySelectorAll(".mega-menu a").forEach(function(link){
 
-    megaMenu.classList.remove("show");
+    link.addEventListener("click", function(){
+
+        megaItem.classList.add("is-closed");
+        link.blur();
+
+    });
+
+});
+
+megaItem.addEventListener("mouseleave", function(){
+
+    megaItem.classList.remove("is-closed");
 
 });
 
 
-tratamientos.addEventListener("mouseleave", function(){
+document.addEventListener("keydown", function(event){
 
-    setTimeout(function(){
+    if(event.key !== "Escape") return;
 
-        if(!megaMenu.matches(":hover")){
-            megaMenu.classList.remove("show");
-        }
+    setMenu(false);
 
-    },100);
-
-});
-
-
-megaMenu.addEventListener("mouseenter", function(){
-
-    megaMenu.classList.add("show");
+    if(megaItem.contains(document.activeElement)){
+        document.activeElement.blur();
+    }
 
 });
 
 
-megaMenu.addEventListener("mouseleave", function(){
+// El header gana sombra cuando la barra superior sale de pantalla
+if (topbar && "IntersectionObserver" in window) {
 
-    megaMenu.classList.remove("show");
+    new IntersectionObserver(function(entries){
 
-});
+        header.classList.toggle("is-stuck", !entries[0].isIntersecting);
 
+    }).observe(topbar);
+
+}
