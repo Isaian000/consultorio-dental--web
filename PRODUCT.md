@@ -22,15 +22,16 @@ Según el texto actual del sitio: atención completamente personalizada, diagnó
 
 ## Operating Context
 
-- Página única con anclas: Inicio, Tratamientos, Reseñas, Proceso y Contacto (footer).
-- La cita se pide por WhatsApp. Los botones "Agenda una cita" abren un chat con el 33 1846 0759 (`https://wa.me/523318460759`).
+- Inicio (`index.html`) con anclas: Sobre el doctor, Trayectoria, Tratamientos, Reseñas, Proceso y Contacto (footer).
+- Página de tratamientos (`tratamientos.html`): el visitante elige lo que le pasa y ve la ficha del tratamiento que lo resuelve. Cada ficha tiene su ancla (`#implantes`, `#carillas`, etc.), a la que enlazan el mega menú y las tarjetas del inicio.
+- La cita se pide por WhatsApp. Los botones "Agenda una cita" abren un chat con el 33 1846 0759 (`https://wa.me/523318460759`). En cada ficha el mensaje ya menciona el tratamiento. En móvil hay un botón flotante que aparece cuando no hay otro botón de cita a la vista.
 - El proceso que el sitio describe al paciente tiene cuatro pasos: Diagnóstico, Estudios, Tratamiento y Seguimiento.
 
 ## Capabilities and Constraints
 
-- Sitio estático: `index.html`, `styles.css` y `script.js`, sin framework ni paso de build.
-- Tratamientos mostrados en tarjetas: implantes, carillas, ortodoncia y endodoncia. El menú lista además blanqueamiento, diseño de sonrisa, periodoncia, limpieza, prótesis y extracciones, sin páginas propias todavía.
-- Sin decidir: páginas individuales por tratamiento y la página "Conoce mi trayectoria".
+- Sitio estático: `index.html`, `tratamientos.html`, `aviso-de-privacidad.html`, `styles.css` y `script.js`, sin framework ni paso de build. El header y el footer están duplicados en las tres páginas: un cambio en uno hay que repetirlo en las demás.
+- Diez tratamientos en tres grupos (Estética dental, Salud dental, Cirugía e implantes). En el inicio se muestran cuatro en tarjetas: implantes, carillas, ortodoncia y endodoncia. Los diez tienen foto en su ficha.
+- Decidido: una sola página de tratamientos con anclas en lugar de una página por tratamiento, y la trayectoria como sección del inicio en lugar de página propia.
 
 ## Brand Commitments
 
@@ -45,8 +46,12 @@ Todo el contenido es de muestra y no debe presentarse como real fuera del portaf
 - Testimonios (María G., Carlos R., Ana P.) y sus fotos: ficticios.
 - "10+ años de experiencia": dato de muestra.
 - Dirección (Av. Naciones Unidas, Zapopan, Jal, 445567) y horarios: de muestra; el código postal no es válido.
-- Fotos del doctor: imagen de stock. Fotos de tratamientos (`img/implantes.webp`, `img/carillas.webp`, `img/ortodoncia.webp`, `img/endodoncia.webp`): generadas con IA.
-- No hay logo, número de teléfono, cédula profesional ni redes sociales reales.
+- Fotos del doctor: imagen de stock. Fotos de tratamientos (las diez de `img/`, en `.webp` o `.avif`): generadas con IA.
+- Fichas de tratamientos: descripciones, número de citas, duración y precios "desde" son de muestra. Un consultorio real debe confirmar cada dato antes de publicarlo.
+- Trayectoria (título en la Universidad de Guadalajara en 2009, diplomados de 2012 y 2019, consultorio desde 2014): de muestra.
+- Aviso de privacidad (`aviso-de-privacidad.html`): texto de muestra; un consultorio real debe revisarlo con un asesor legal.
+- Sitio publicado en https://smile-studio-gamma.vercel.app/ (Vercel). Las etiquetas Open Graph, las URL canónicas y el JSON-LD apuntan a ese dominio; `img/og-image.jpg` es la imagen para compartir.
+- No hay logo, número de teléfono, cédula profesional ni redes sociales reales. Los íconos de Facebook e Instagram apuntan a la portada de cada red.
 
 ## Product Principles
 
