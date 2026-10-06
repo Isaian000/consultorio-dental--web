@@ -1,5 +1,42 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+/* Tipografía: Red Hat Display para títulos y marca, Red Hat Text para lectura.
+   Archivos variables, subconjunto latino, servidos desde /fonts. */
+
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("fonts/red-hat-display.woff2") format("woff2");
+    font-weight: 500 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Red Hat Text";
+    src: url("fonts/red-hat-text.woff2") format("woff2");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.brand-mark,
+.brand-text,
+.hero-background-name,
+.footer-wordmark,
+.footer-name,
+.experience-card strong,
+.experience-badge strong,
+.career-year {
+    font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-family: inherit;
 }
 
 :root {
@@ -2199,8 +2236,8 @@ PÁGINA DE TRATAMIENTOS
 }
 
 .treatments-intro {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 48px;
+    padding-bottom: 34px;
 }
 
 .treatments-intro h1 {
@@ -2327,13 +2364,13 @@ PÁGINA DE TRATAMIENTOS
 
 .ficha-photo {
     width: 100%;
-    aspect-ratio: 3 / 1;
+    aspect-ratio: 4 / 1;
     object-fit: cover;
     object-position: var(--focus, center);
 }
 
 .ficha-body {
-    padding: 44px 48px 48px;
+    padding: 36px 48px 48px;
 }
 
 .ficha h2 {
@@ -2389,8 +2426,8 @@ PÁGINA DE TRATAMIENTOS
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-    margin: 30px 0;
-    padding: 22px 0;
+    margin: 24px 0;
+    padding: 20px 0;
     border-top: 1px solid rgba(18, 118, 110, .16);
     border-bottom: 1px solid rgba(18, 118, 110, .16);
     font-variant-numeric: tabular-nums;
